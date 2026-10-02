@@ -1,0 +1,31 @@
+name: firebase_core_webos
+description: webOS implementation of the firebase_core plugin.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.6.1
+  flutter: '>=3.3.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core_platform_interface: ^6.0.3
+  path_provider_webos:
+    git:
+      url: https://github.com/lg-flutter-webos/plugins.git
+      path: packages/path_provider
+      ref: main
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  pigeon: ^17.0.0
+
+flutter:
+  plugin:
+    platforms:
+      webos:
+        dartPluginClass : FirebaseCoreWebos
+        pluginClass: FirebaseCoreWebosPlugin
